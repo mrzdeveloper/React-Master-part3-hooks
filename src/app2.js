@@ -12,14 +12,24 @@ function App2() {
     useEffect(() => {
         getUser()
 
-    },[])
+    }, [])
+    users.map((item) => {
 
+    })
     return (<>
+        <ul>
+            {users.map((item) => {
+                const { id, avatar_url } = item;
+                return (
+                    <>
+                        <li>{id}</li>
+                        <li>{avatar_url}</li>
+                    </>
+                )
 
 
-
-
-
+            })}
+        </ul>
     </>);
 }
 
