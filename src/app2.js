@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { Data } from './data'
+const url = "https://api.github.com/users";
 
+function App2() {
+    const [users, setUsers] = useState([]);
+    const getUser = async () => {
+        const response = await fetch(url);
+        const users = await response.json();
+        console.log(users);
+    }
+    useEffect(() => {
+        getUser()
 
-const useEffect = () => {
-<p></p>
-    return ( {
-
-    } );
-}
- 
-
-const App2 = () => {
-    const [Product, useProduct] = useState(0)
+    })
 
     return (<>
+
+
+
+
+
     </>);
 }
 
 export default App2;
-
-
-<span></span>
